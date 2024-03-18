@@ -11,9 +11,10 @@ public class Main {
     private final static String dataPath = "src/main/resources/data.json";
     private final static String signature = "signature";
     private final static int requestNumber = 10;
+    private final static int requestLimit = 5;
 
     public static void main(String[] args) {
-        CrptApi api = new CrptApi(TimeUnit.MINUTES, 5);
+        CrptApi api = new CrptApi(TimeUnit.MINUTES, requestLimit);
         ObjectMapper objectMapper = new ObjectMapper();
         CrptApi.Document document = null;
 
